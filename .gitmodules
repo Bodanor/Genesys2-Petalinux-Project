@@ -1,0 +1,3 @@
+[submodule "Genenys2-PetaLinux-Microblaze-FPGA-Design"]
+	path = Genenys2-PetaLinux-Microblaze-FPGA-Design
+	url = git@github.com:Bodanor/Genenys2-PetaLinux-Microblaze-FPGA-Design.git
