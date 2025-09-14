@@ -1,0 +1,19 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+&axi_quad_spi_0 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	flash0: flash@0 {
+		compatible = "spansion,s25fl256s1","jedec,spi-nor";
+	};
+};
+
+/*
+&axi_quad_spi@44a00000 {
+    flash0: flash@0 {
+        compatible = "spansion,s25fl256s1";
+    };
+};
+*/
+

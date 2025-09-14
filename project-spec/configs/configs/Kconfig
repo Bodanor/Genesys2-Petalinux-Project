@@ -1,0 +1,19 @@
+
+mainmenu "PetaLinux System Configuration"
+config SUBSYSTEM_TYPE_LINUX
+        bool
+        default y
+        select SYSTEM_MICROBLAZE
+
+config SYSTEM_MICROBLAZE
+        bool "MICROBLAZE Configuration"
+        help
+          MICROBLAZE Configuration for the project.
+          All these config options will be in /home/liwinux/work/linux_mb/project-spec/configs/config
+
+config SUBSYSTEM_DISTRO_PETALINUX
+        bool
+        default y
+        help
+
+source /home/liwinux/work/linux_mb/project-spec/configs/configs/Kconfig.main
