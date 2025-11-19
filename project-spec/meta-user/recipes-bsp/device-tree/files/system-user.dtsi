@@ -1,6 +1,5 @@
 /include/ "system-conf.dtsi"
-/ {
-};
+
 &axi_quad_spi_0 {
 	#address-cells = <1>;
 	#size-cells = <0>;
@@ -9,11 +8,25 @@
 	};
 };
 
-/*
-&axi_quad_spi@44a00000 {
-    flash0: flash@0 {
-        compatible = "spansion,s25fl256s1";
-    };
+&axi_ethernet_0 {
+	compatible = "xlnx,axi-ethernet-1.00.a";
+        phy-mode = "rgmii";
+        phy-handle = <&phy0>;
+	xlnx,rxcsum = <0x2>;
+        xlnx,rxmem = <0x800>;
+        xlnx,txcsum = <0x2>;
+
+        mdio {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            phy0: ethernet-phy@1 {
+                device_type = "ethernet-phy";
+                reg = <1>;
+	    };
+	};
 };
-*/
+
+&axi_iic_0 {
+	clock-frequency = <100000>;
+};
 

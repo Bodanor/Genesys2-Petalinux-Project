@@ -9,11 +9,11 @@ config SYSTEM_MICROBLAZE
         bool "MICROBLAZE Configuration"
         help
           MICROBLAZE Configuration for the project.
-          All these config options will be in /home/liwinux/work/linux_mb/project-spec/configs/config
+          All these config options will be in /home/liwinux/mnt/project-spec/configs/config
 
 config SUBSYSTEM_DISTRO_PETALINUX
         bool
         default y
         help
 
-source /home/liwinux/work/linux_mb/project-spec/configs/configs/Kconfig.main
+source /home/liwinux/mnt/project-spec/configs/configs/Kconfig.main

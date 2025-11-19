@@ -1,36 +1,14 @@
-2025-09-14 17:26:29,752 - [DEBUG] Using xsct from : /opt/Peta/components/xsct/bin/xsct
-2025-09-14 17:26:29,753 - [INFO] Getting Platform info from HW file
-2025-09-14 17:26:29,753 - [DEBUG] Using the soc_family specified by user:microblaze
-2025-09-14 17:26:29,755 - [INFO] Generating Kconfig for project
-2025-09-14 17:26:29,755 - [DEBUG] Generating System HW file
-2025-09-14 17:26:29,756 - [DEBUG] xsct -sdx -nodisp /home/liwinux/work/linux_mb/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-description.tcl plnx_gen_hwsysconf /home/liwinux/work/linux_mb/project-spec/hw-description/system.xsa
-2025-09-14 17:26:35,926 - [DEBUG] 
-
-****** Software Commandline Tool (XSCT) v2025.1.0
-  **** SW Build 6135694 on Thu May 15 18:54:54 MDT 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-Warning: XSCT is deprecated and will be removed in future releases.
-We recommend using the new Python command-line tool for project management and debugging:
-- Run "vitis -i" for interactive mode.
-- Run "vitis -s <script>" for script mode.
-WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- be available
-INFO: [Hsi 55-2053] elapsed time for repository (/opt/Peta/components/xsct/data/embeddedsw) loading 0 seconds
-
-WARNING: Failed in finding /opt/Peta/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
-
-
-2025-09-14 17:26:36,008 - [DEBUG] Hardware Configuration:
-2025-09-14 17:26:36,009 - [DEBUG] MACHINE     = "None"
-2025-09-14 17:26:36,009 - [DEBUG] DEVICE_ID   = "7k325t"
-2025-09-14 17:26:36,009 - [DEBUG] SOC_FAMILY  = "microblaze"
-2025-09-14 17:26:36,009 - [DEBUG] SOC_VARIANT = ""
-2025-09-14 17:26:36,009 - [INFO] Silentconfig project
-2025-09-14 17:26:36,009 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/liwinux/work/linux_mb/project-spec/configs/config conf /home/liwinux/work/linux_mb/project-spec/configs/configs/Kconfig
-2025-09-14 17:26:36,023 - [DEBUG] *
+2025-11-19 21:07:20,659 - [DEBUG] Using xsct from : /opt/Peta/components/xsct/bin/xsct
+2025-11-19 21:07:20,660 - [INFO] Getting Platform info from HW file
+2025-11-19 21:07:20,660 - [DEBUG] Using the soc_family specified by user:microblaze
+2025-11-19 21:07:20,666 - [DEBUG] Hardware Configuration:
+2025-11-19 21:07:20,666 - [DEBUG] MACHINE     = "None"
+2025-11-19 21:07:20,666 - [DEBUG] DEVICE_ID   = "7k325t"
+2025-11-19 21:07:20,666 - [DEBUG] SOC_FAMILY  = "microblaze"
+2025-11-19 21:07:20,666 - [DEBUG] SOC_VARIANT = ""
+2025-11-19 21:07:20,666 - [INFO] Silentconfig project
+2025-11-19 21:07:20,666 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/liwinux/mnt/project-spec/configs/config conf /home/liwinux/mnt/project-spec/configs/configs/Kconfig
+2025-11-19 21:07:20,670 - [DEBUG] *
 * PetaLinux System Configuration
 *
 MICROBLAZE Configuration (SYSTEM_MICROBLAZE) [Y/?] y
@@ -92,8 +70,11 @@ choice[1-7?]: *
 * Ethernet Settings
 *
 Primary Ethernet
-> 1. manual (SUBSYSTEM_ETHERNET_MANUAL_SELECT)
-choice[1]: 1
+> 1. axi_ethernet_0 (SUBSYSTEM_ETHERNET_AXI_ETHERNET_0_SELECT)
+  2. manual (SUBSYSTEM_ETHERNET_MANUAL_SELECT)
+choice[1-2?]: Randomise MAC address (SUBSYSTEM_ETHERNET_AXI_ETHERNET_0_MAC_AUTO) [N/y/?] 
+  Ethernet MAC address (SUBSYSTEM_ETHERNET_AXI_ETHERNET_0_MAC) [00:0a:35:00:35:53] 
+Obtain IP address automatically (SUBSYSTEM_ETHERNET_AXI_ETHERNET_0_USE_DHCP) [Y/n/?] 
 *
 * Flash Settings
 *
@@ -260,17 +241,11 @@ Enable Buildtools Extended (YOCTO_BUILDTOOLS_EXTENDED) [N/y/?]
 *
 user layer 0 (USER_LAYER_0) [] 
 #
-# configuration written to /home/liwinux/work/linux_mb/project-spec/configs/config
+# configuration written to /home/liwinux/mnt/project-spec/configs/config
 #
-2025-09-14 17:26:36,096 - [INFO] Generating kconfig for rootfs
-2025-09-14 17:26:36,097 - [DEBUG] python3 /home/liwinux/work/linux_mb/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --generate_kconfig /home/liwinux/work/linux_mb/project-spec/meta-user/conf/user-rootfsconfig /home/liwinux/work/linux_mb/project-spec/configs/rootfsconfigs
-2025-09-14 17:26:36,174 - [DEBUG] 
-
-
-
-2025-09-14 17:26:36,175 - [INFO] Silentconfig rootfs
-2025-09-14 17:26:36,175 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/liwinux/work/linux_mb/project-spec/configs/rootfs_config conf /home/liwinux/work/linux_mb/project-spec/configs/rootfsconfigs/Kconfig
-2025-09-14 17:26:36,188 - [DEBUG] *
+2025-11-19 21:07:20,700 - [INFO] Silentconfig rootfs
+2025-11-19 21:07:20,700 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/liwinux/mnt/project-spec/configs/rootfs_config conf /home/liwinux/mnt/project-spec/configs/rootfsconfigs/Kconfig
+2025-11-19 21:07:20,704 - [DEBUG] *
 * Configuration
 *
 *
@@ -532,7 +507,7 @@ dropbear-dbg (dropbear-dbg) [N/y/?]
 *
 * ethtool 
 *
-ethtool (ethtool) [N/y/?] 
+ethtool (ethtool) [Y/n/?] 
 ethtool-dev (ethtool-dev) [N/y/?] 
 ethtool-dbg (ethtool-dbg) [N/y/?] 
 *
@@ -554,7 +529,7 @@ openssh-sshd (openssh-sshd) [N/y/?]
 *
 * bash-completion 
 *
-bash-completion (bash-completion) [N/y/?] 
+bash-completion (bash-completion) [Y/n/?] 
 bash-completion-extra (bash-completion-extra) [N/y/?] 
 bash-completion-dbg (bash-completion-dbg) [N/y/?] 
 bash-completion-dev (bash-completion-dev) [N/y/?] 
@@ -574,7 +549,7 @@ gawk-dev (gawk-dev) [N/y/?]
 *
 * grep 
 *
-grep (grep) [N/y/?] 
+grep (grep) [Y/n/?] 
 grep-dbg (grep-dbg) [N/y/?] 
 grep-dev (grep-dev) [N/y/?] 
 *
@@ -636,7 +611,7 @@ perl-misc (perl-misc) [N/y/?]
 *
 * python3 
 *
-python3 (python3) [N/y/?] 
+python3 (python3) [Y/n/?] 
 python3-crypt (python3-crypt) [N/y/?] 
 python3-threading (python3-threading) [N/y/?] 
 python3-difflib (python3-difflib) [N/y/?] 
@@ -951,6 +926,8 @@ choice[1-2]: *
 * user packages 
 *
 gpio-demo (gpio-demo) [N/y/?] 
+i2c-tools (i2c-tools) [Y/n/?] 
+iperf3 (iperf3) [Y/n/?] 
 peekpoke (peekpoke) [N/y/?] 
 *
 * PetaLinux RootFS Settings
@@ -960,49 +937,9 @@ Create new Groups (CREATE_NEW_GROUPS) [aie;]
 Add Users to Groups (ADD_USERS_TO_GROUPS) [petalinux:audio,video,aie,input;] 
 Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux] 
 #
-# configuration written to /home/liwinux/work/linux_mb/project-spec/configs/rootfs_config
+# configuration written to /home/liwinux/mnt/project-spec/configs/rootfs_config
 #
-2025-09-14 17:26:36,200 - [INFO] Generating configuration files
-2025-09-14 17:26:36,204 - [DEBUG] No multilibs enabled.
-2025-09-14 17:26:36,204 - [DEBUG] No multilibs enabled.
-2025-09-14 17:26:36,205 - [INFO] Adding user layers
-2025-09-14 17:26:36,205 - [DEBUG] Shutting down bitbake
-2025-09-14 17:26:36,205 - [DEBUG] Adding layer: /home/liwinux/work/linux_mb/project-spec/meta-user
-2025-09-14 17:26:36,205 - [DEBUG] bitbake-layers -F add-layer /home/liwinux/work/linux_mb/project-spec/meta-user
-2025-09-14 17:26:39,705 - [DEBUG] 
-NOTE: Starting bitbake server...
-WARNING: The microblaze-generic machine is intended to be included by other machines, it should not be used by itself.  For a non-machine, SoC specific filesystem, please use one of the common machines defined in meta-xilinx-core.
-NOTE: Started PRServer with DBfile: /home/liwinux/work/linux_mb/build/cache/prserv.sqlite3, Address: 127.0.0.1:44301, PID: 1346681
-
-
-
-2025-09-14 17:26:39,711 - [INFO] Generating machine conf file
-2025-09-14 17:26:39,725 - [INFO] Generating plnxtool conf file
-2025-09-14 17:26:39,732 - [INFO] Generating kernel configuration files
-2025-09-14 17:26:39,795 - [INFO] Generating u-boot configuration files
-2025-09-14 17:26:39,795 - [DEBUG] xsct -sdx -nodisp /home/liwinux/work/linux_mb/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/petalinux_hsm_bridge.tcl -c /home/liwinux/work/linux_mb/project-spec/configs/config -a u-boot_bsp -hdf /home/liwinux/work/linux_mb/project-spec/hw-description/system.xsa -o /home/liwinux/work/linux_mb/project-spec/configs/u-boot-xlnx -data /home/liwinux/work/linux_mb/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/data
-2025-09-14 17:26:46,093 - [DEBUG] 
-
-****** Software Commandline Tool (XSCT) v2025.1.0
-  **** SW Build 6135694 on Thu May 15 18:54:54 MDT 2025
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-Warning: XSCT is deprecated and will be removed in future releases.
-We recommend using the new Python command-line tool for project management and debugging:
-- Run "vitis -i" for interactive mode.
-- Run "vitis -s <script>" for script mode.
-WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
- be available
-INFO: [Hsi 55-2053] elapsed time for repository (/opt/Peta/components/xsct/data/embeddedsw) loading 0 seconds
-
-WARNING: Failed in finding /opt/Peta/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
-
-
-2025-09-14 17:26:46,103 - [DEBUG] python3 /home/liwinux/work/linux_mb/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/rootfsconfigs/rootfs_config.py --update_cfg /home/liwinux/work/linux_mb/project-spec/configs/rootfs_config /home/liwinux/work/linux_mb/build/conf/plnxtool.conf microblaze
-2025-09-14 17:26:46,179 - [DEBUG] 
-
-
-
-2025-09-14 17:26:46,181 - [DEBUG] Shutting down bitbake
+2025-11-19 21:07:20,708 - [INFO] Generating configuration files
+2025-11-19 21:07:20,709 - [DEBUG] No multilibs enabled.
+2025-11-19 21:07:20,709 - [DEBUG] No multilibs enabled.
+2025-11-19 21:07:20,719 - [DEBUG] Shutting down bitbake

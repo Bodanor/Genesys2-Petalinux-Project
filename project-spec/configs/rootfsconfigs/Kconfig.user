@@ -3,6 +3,14 @@ config gpio-demo
 	 bool "gpio-demo"
 	 help
 	
+config i2c-tools  
+	 bool "i2c-tools"
+	 help
+	
+config iperf3  
+	 bool "iperf3"
+	 help
+	
 config peekpoke  
 	 bool "peekpoke"
 	 help

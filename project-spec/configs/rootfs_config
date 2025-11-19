@@ -298,7 +298,7 @@ CONFIG_can-utils=y
 #
 # ethtool 
 #
-# CONFIG_ethtool is not set
+CONFIG_ethtool=y
 # CONFIG_ethtool-dev is not set
 # CONFIG_ethtool-dbg is not set
 
@@ -323,7 +323,7 @@ CONFIG_can-utils=y
 #
 # bash-completion 
 #
-# CONFIG_bash-completion is not set
+CONFIG_bash-completion=y
 # CONFIG_bash-completion-extra is not set
 # CONFIG_bash-completion-dbg is not set
 # CONFIG_bash-completion-dev is not set
@@ -346,7 +346,7 @@ CONFIG_can-utils=y
 #
 # grep 
 #
-# CONFIG_grep is not set
+CONFIG_grep=y
 # CONFIG_grep-dbg is not set
 # CONFIG_grep-dev is not set
 
@@ -418,7 +418,7 @@ CONFIG_pciutils=y
 #
 # python3 
 #
-# CONFIG_python3 is not set
+CONFIG_python3=y
 # CONFIG_python3-crypt is not set
 # CONFIG_python3-threading is not set
 # CONFIG_python3-difflib is not set
@@ -773,6 +773,8 @@ CONFIG_Init-manager-sysvinit=y
 # user packages 
 #
 # CONFIG_gpio-demo is not set
+CONFIG_i2c-tools=y
+CONFIG_iperf3=y
 # CONFIG_peekpoke is not set
 
 #
